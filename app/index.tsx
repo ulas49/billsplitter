@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import billImage from '../assets/images/bill.jpg';
+import {Button} from 'react-native-elements'
 export default function Index() {
   const router = useRouter();
 
@@ -30,6 +31,8 @@ export default function Index() {
          <TouchableOpacity >
         <Text>Register</Text>
       </TouchableOpacity>
+      <Button title="Deneme" type="outline" buttonStyle={{width:100}}/> 
+
     </SafeAreaView>
   );
 }
