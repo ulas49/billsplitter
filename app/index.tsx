@@ -8,30 +8,27 @@ export default function Index() {
   const router = useRouter();
 
   const handleLogin = () => {
-    router.replace("/login");
+    router.push("/login");
   };
   
   return (
     <SafeAreaView
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor:"#fff"
       }}
     >
+      <View className="flex-1 items-center justify-center">
       <Image alt="home_image " source={billImage} className="w-full h-[18.75rem] "/>
       <View>
-        <Text className="text-3xl font-bold">Welcome to  </Text>
-        <Text className="text-3xl font-bold"> HesapOrtak </Text>
+        <Text className="text-3xl font-[mont-semibold] mb-8 mt-12">Welcome to HesapOrtak </Text>
       </View>
-      <TouchableOpacity onPress={handleLogin}>
-        <Text>Login</Text>
-      </TouchableOpacity>
-         <TouchableOpacity >
-        <Text>Register</Text>
-      </TouchableOpacity>
-      <Button title="Deneme" type="outline" buttonStyle={{width:100}}/> 
+      <View className="flex gap-3 ">
+      <Button title="Login" type="outline" buttonStyle={{width:250}} onPress={handleLogin}  /> 
+      <Button title="Register" type="outline" buttonStyle={{width:250}}/> 
+      </View>
+  
+      </View>
 
     </SafeAreaView>
   );
